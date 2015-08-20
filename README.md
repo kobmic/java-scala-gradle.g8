@@ -13,7 +13,7 @@ Follow g8 [installation instructions](http://github.com/n8han/giter8#readme) or 
 
 Go to your favourite shell and enter  
 
-    g8 kobmic/java-scala-mvn
+    g8 kobmic/java-scala-gradle
     cd [app-name]
     gradle build
 
