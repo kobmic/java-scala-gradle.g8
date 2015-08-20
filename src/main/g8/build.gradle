@@ -16,3 +16,10 @@ dependencies {
   testCompile "org.scalatest:scalatest_2.11:2.2.4"
   testCompile "junit:junit:4.11"
 }
+
+//run scala tests, not automatically picked up by gradle
+task spec(dependsOn: ['testClasses'], type: JavaExec) {
+  main = 'org.scalatest.tools.Runner'
+  args = ['-R', 'build/classes/test', '-o']
+  classpath = sourceSets.test.runtimeClasspath
+}
